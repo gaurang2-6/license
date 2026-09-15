@@ -69,19 +69,19 @@ The pipeline is completely ready to accept new test images and video clips:
 ### 1. Process a Single Image
 
 ```bash
-python src/pipeline.py --image path/to/vehicle.jpg --out outputs/interview_case_1
+.venv\Scripts\python src/pipeline.py --image "data/28584.jpg" --out "outputs/my_case_result"
 ```
 
 If you have an optional ground-truth plate string or clean reference for quantitative scoring:
 ```bash
-python src/pipeline.py --image path/to/vehicle.jpg --gt "MH12AB1234" --out outputs/interview_case_1
+.venv\Scripts\python src/pipeline.py --image "data/28584.jpg" --gt "MH12AB1234" --out "outputs/my_case_result"
 ```
 
 ### 2. Process a Shaky / Degraded Video Clip
 
 The pipeline automatically identifies the sharpest reference frame, performs sub-pixel ECC motion alignment across all frames to cancel camera jitter, computes a temporal median super-resolution composite, and extracts the plate:
 ```bash
-python src/pipeline.py --video path/to/dashcam.mp4 --out outputs/interview_video_case
+.venv\Scripts\python src/pipeline.py --video path/to/dashcam.mp4 --out outputs/interview_video_case
 ```
 
 ### 3. Generated Artifacts per Input
