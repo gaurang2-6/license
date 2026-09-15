@@ -1,0 +1,29 @@
+# Python virtual environment & dependencies
+.venv/
+venv/
+env/
+ENV/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Large model weights & checkpoints
+*.pt
+*.onnx
+*.pth
+*.bin
+
+# Large datasets & runtime outputs
+data/
+outputs/
+runs/
+
+# System / IDE artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+snapshot.json
